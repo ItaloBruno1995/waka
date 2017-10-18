@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
 			try {
 				if (daoWaka.login(usuario)) {
 					// REDIRECIONAR PARA PAGINA DE ACESSO:
-					RequestDispatcher despatcher = request.getRequestDispatcher("Pagina Inicial.jsp");
+					RequestDispatcher despatcher = request.getRequestDispatcher("index.jsp");
 					despatcher.forward(request, response);
 
 				} else {

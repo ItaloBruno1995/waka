@@ -40,8 +40,8 @@ public class Filter implements javax.servlet.Filter {
 
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
-		conection=SingleConnection.getConection();
-	}
+		//conection=SingleConnection.getConection();
+    }
 
 	
 	

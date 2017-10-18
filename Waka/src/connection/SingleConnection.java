@@ -7,9 +7,9 @@ public class SingleConnection {
 
 	
 	
-	private static String banco="jdbc:mysql://db4free.net:3306/waka?autoReconnect=true";
-	private static String senha="root123";
-	private static String use="waka_root";
+	private static String banco="jdbc:mysql://localhost:3306/waka?autoReconnect=true";
+	private static String senha="";
+	private static String use="root";
 	private static Connection connection = null;
 	
 	

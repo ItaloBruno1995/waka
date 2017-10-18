@@ -12,6 +12,13 @@ Email: <input type="text" name="email" id="email" />
 <br/>
 Senha: <input type="password" id="senha" name="senha">
 <br/>
+Tipo de Login:
+<select name="tipoLogin">
+<option value="Waka"> Waka </option>
+<option value="Empreendedor"> Empreendedor </option>
+<option value="Investidor"> Investidor</option>
+</select>
+<br />
 <input type="submit" value="Entrar" />
 
 </form>

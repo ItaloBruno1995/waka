@@ -2,7 +2,6 @@ package controle;
 
 import java.io.IOException;
 
-import javax.management.modelmbean.RequiredModelMBean;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,7 +25,7 @@ public class LoginServlet extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+			throws ServletException, IOException {		
 
 	}
 

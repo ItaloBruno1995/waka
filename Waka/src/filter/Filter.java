@@ -29,12 +29,12 @@ public class Filter implements javax.servlet.Filter {
 			arg2.doFilter(arg0, arg1);
 			conection.commit();
 			}catch(Exception ex){}
-			try {
+/*			try {
 				conection.rollback();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			}*/
 		
 	}
 

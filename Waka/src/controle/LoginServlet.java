@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.BeanUsuario;
 import model.DaoAdministrador;
@@ -50,11 +51,16 @@ public class LoginServlet extends HttpServlet {
 
 			try {
 				if (daoWaka.login(usuario)) {
-					PrintWriter out = response.getWriter();
+					//COLOCAR O USUARIO NA SESSÃO:
+					 HttpSession sessaoAdimin = request.getSession();
+					 
+					//pega a sessao da tag e passa o nome do usuario
+				        sessaoAdimin.setAttribute("sessaoAdministrador",usuario.getEmail()); 
+					
 					// CONFIRMAR :CONCLUIDO COM SUCESSO!
 
 					request.setAttribute("status", "Sucesso!");
-					response.setStatus(200);
+				
 
 					// REDIRECIONAR PARA PAGINA DE ACESSO:
 					RequestDispatcher despatcher = request.getRequestDispatcher("index.jsp");

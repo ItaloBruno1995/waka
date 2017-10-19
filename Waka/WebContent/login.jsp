@@ -15,16 +15,32 @@
 		</div>
 		<div>
 			<form action="LoginServlet" method="post">
+			<!-- RETORNO DO LOGIN(MENSAGEM DE ERRO) -->
+			<%if(request.getAttribute("status")== null) 
+			request.setAttribute("status", "");
+			%>
+			
+			<p style="color: red;"><%=request.getAttribute("status")%></p>
+			
+			
 				Email:<input type="text" name="email" id="email" /> <br />
 			    Senha: <input type="password" id="senha" name="senha"> <br /> Tipo
 				de Login: <select name="tipoLogin">
 					<option value="Waka">Waka</option>
 					<option value="Empreendedor">Empreendedor</option>
 					<option value="Investidor">Investidor</option>
-				</select> <br /> <input type="submit" value="Entrar" />
+				</select> <br /> <input type="submit" value="Entrar" onclick="salvar()" />
 
 			</form>
 		</div>	
 	</div>
+	
+	
+	<script>
+
+	
+
+
+	</script>
 </body>
 </html>

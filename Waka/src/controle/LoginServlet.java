@@ -1,6 +1,7 @@
 package controle;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,19 +20,25 @@ import model.DaoAdministrador;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	
+	
 	public LoginServlet() {
+		
 		super();
 		// TODO Auto-generated constructor stub
+		
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {		
+			throws ServletException, IOException {
 
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// METODO DE LOGIN:
+	
+		
 		// INDENTIFICAR QUEM TA FAZENDO O LOGIN:
 		String tipoLogin = request.getParameter("tipoLogin");
 		if (tipoLogin.equalsIgnoreCase("waka")) {
@@ -43,16 +50,36 @@ public class LoginServlet extends HttpServlet {
 
 			try {
 				if (daoWaka.login(usuario)) {
+					PrintWriter out = response.getWriter();
+					// CONFIRMAR :CONCLUIDO COM SUCESSO!
+
+					request.setAttribute("status", "Sucesso!");
+					response.setStatus(200);
+
 					// REDIRECIONAR PARA PAGINA DE ACESSO:
 					RequestDispatcher despatcher = request.getRequestDispatcher("index.jsp");
 					despatcher.forward(request, response);
 
 				} else {
+					request.setAttribute("status", "Login Invalido");// OPÇÃO
+																		// NÃO
+																		// ENCONTRADA
+
+					// REDIRECIONAR PARA PAGINA DE ACESSO:
+					RequestDispatcher despatcher = request.getRequestDispatcher("login.jsp");
+					despatcher.forward(request, response);
 
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+
+				request.setAttribute("status", "Login Invalido");
+				;// ERRO INTERNO DO SERVIDOR
+				// REDIRECIONAR PARA PAGINA DE LOGIN:
+				RequestDispatcher despatcher = request.getRequestDispatcher("login.jsp");
+				despatcher.forward(request, response);
+
 			}
 
 		}

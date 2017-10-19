@@ -28,19 +28,19 @@ public class Filter implements javax.servlet.Filter {
 		try{
 			arg2.doFilter(arg0, arg1);
 			conection.commit();
-			}catch(Exception ex){}
-/*			try {
+			}catch(Exception ex){}		
+		try {
 				conection.rollback();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}*/
+			}
 		
 	}
 
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
-		//conection=SingleConnection.getConection();
+		conection=SingleConnection.getConection();
 
     }
 

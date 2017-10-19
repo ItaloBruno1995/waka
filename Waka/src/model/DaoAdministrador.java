@@ -16,7 +16,7 @@ public class DaoAdministrador extends BeanUsuario {
 
 	public boolean login(BeanUsuario usuario)  throws Exception{
 		
-		PreparedStatement stmt = connection.prepareStatement("select * from administrador where login=? and senha=?");
+		PreparedStatement stmt = connection.prepareStatement("select * from administrador where email=? and senha=?");
 		stmt.setString(1, usuario.email);
 		stmt.setString(2, usuario.senha);
 		ResultSet rs = stmt.executeQuery();
@@ -29,8 +29,9 @@ public class DaoAdministrador extends BeanUsuario {
 			return false;
 		}
 		
-		
 
 	}
+	//METODO PARA SETAR ID:
+	
 
-}
+}//FIM DA CLASSE

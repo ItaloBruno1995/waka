@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 
 import connection.SingleConnection;
 
-public class DaoAdministrador extends BeanUsuario {
+public class DaoAdministrador  {
 
 	private Connection connection;
 

@@ -18,7 +18,7 @@ public class Filter implements javax.servlet.Filter {
 	private static Connection conection;
 	@Override
 	public void destroy() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
@@ -32,7 +32,6 @@ public class Filter implements javax.servlet.Filter {
 		try {
 				conection.rollback();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		
@@ -40,11 +39,11 @@ public class Filter implements javax.servlet.Filter {
 
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
-		conection=SingleConnection.getConection();
+		conection = SingleConnection.getConection();
 
     }
 
-	}
+}
 
 
 	

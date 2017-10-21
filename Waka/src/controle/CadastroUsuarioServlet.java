@@ -20,7 +20,6 @@ import model.DaoEmpreendedor;
 @WebServlet("/CadastroUsuarioServlet")
 public class CadastroUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
    
     public CadastroUsuarioServlet() {
         super();
@@ -29,6 +28,14 @@ public class CadastroUsuarioServlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		BeanEmpreendedor empreendedor = new BeanEmpreendedor();
 		DaoEmpreendedor dao = new DaoEmpreendedor();
 		
@@ -40,18 +47,11 @@ public class CadastroUsuarioServlet extends HttpServlet {
 		empreendedor.setSexo(request.getParameter("sexo"));
 		empreendedor.setEmail(request.getParameter("email"));
 		empreendedor.setSenha(request.getParameter("senha"));
+		System.out.println(empreendedor.getDataNascimento());
 		
 		// REDIRECIONAR PARA PAGINA DE 2 ETAPA DO CADASTRO:
 		RequestDispatcher despatcher = request.getRequestDispatcher("cadastroEmpresa.jsp");
 		despatcher.forward(request, response);
-		
-		
-	}
-
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
 	}
 
 }

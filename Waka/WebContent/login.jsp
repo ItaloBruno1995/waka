@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>login</title>
-	<link rel="stylesheet" href="css/login.css" type="text/css">
+	<link rel="stylesheet" href="login.css" type="text/css">
 	<link rel="icon" href="img/waka.png">
 </head>
 <body>
@@ -22,18 +22,19 @@
 			
 			<p style="color: red;"><%=request.getAttribute("status")%></p>
 			
-			
-				Email:<input type="text" name="email" id="email" /> <br />
-			    Senha: <input type="password" id="senha" name="senha"> <br /> Tipo
-				de Login: <select name="tipoLogin">
+			 <table>
+				<tr><td><p>Email: <input type="text" name="email" id="email" /></p></tr></td>
+			    <tr><td><p>Senha: <input type="password" id="senha" name="senha"> <br /> </tr></td></p><tr><td><p>Tipo
+				de Login: <select name="tipoLogin"></p>
 					<option value="Waka">Waka</option>
 					<option value="Empreendedor">Empreendedor</option>
-					<option value="Investidor">Investidor</option>
-				</select> <br /> <input type="submit" value="Entrar" onclick="salvar()" />
-
+					<option value="Investidor">Investidor</option></tr></td>
+				<tr><td></select> <br /> <input type="submit" value="  Logar  " onclick="salvar()" /></tr></td>
+			 </table>
 			</form>
 		</div>	
 	</div>
+	<p>Não tem uma conta?<br/><a href="cadastroEmpreendedor.jsp"> Cadastre-se</a></p>
 	
 	
 	<script>

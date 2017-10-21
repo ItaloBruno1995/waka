@@ -1,0 +1,15 @@
+@CHARSET "ISO-8859-1";
+*{margin: 0px; padding: 0px; box-sizing: border-box;}
+/*main*/
+body{
+	background-color: black; 
+	}
+p{
+	color: white;
+}
+.main{
+	  text-align:center;
+}
+table#tblLogin{
+	text-align:center;
+} 

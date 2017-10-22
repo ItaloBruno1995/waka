@@ -7,7 +7,7 @@
 <title>Recuperação de Senha</title>
 </head>
 <body>
-<h1>Recuperação de Senha</h1>
+<h1>Recuperação de Senha</h1> 
 <form action="" method="post">
 
 		<table>

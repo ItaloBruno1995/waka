@@ -10,9 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.BeanEmpreendedor;
+import model.BeanEmpresa;
 import model.BeanUsuario;
 import model.DaoAdministrador;
 import model.DaoEmpreendedor;
+import model.DaoEmpresa;
 
 /**
  * Servlet implementation class CadastroUsuarioServlet
@@ -38,7 +40,7 @@ public class CadastroUsuarioServlet extends HttpServlet {
 		
 		BeanEmpreendedor empreendedor = new BeanEmpreendedor();
 		DaoEmpreendedor dao = new DaoEmpreendedor();
-		
+		BeanEmpresa empresa = new BeanEmpresa();
 		// RECEBER A REQUISÃO:
 		empreendedor.setNome(request.getParameter("nome"));
 		empreendedor.setDataNascimento(request.getParameter("dataNascimento"));
@@ -47,7 +49,16 @@ public class CadastroUsuarioServlet extends HttpServlet {
 		empreendedor.setSexo(request.getParameter("sexo"));
 		empreendedor.setEmail(request.getParameter("email"));
 		empreendedor.setSenha(request.getParameter("senha"));
+		
+		empresa.setIdEmpreendedor(request.getParameter("email"));
+		
 		System.out.println(empreendedor.getDataNascimento());
+		
+		//EXECUTAR CADASTRO DE EMPREENDEDOR:
+		dao.cadastroEmpreendedor(empreendedor);
+	
+		//COLOCANDO DADOS NA RIQUESTE:
+		
 		
 		// REDIRECIONAR PARA PAGINA DE 2 ETAPA DO CADASTRO:
 		RequestDispatcher despatcher = request.getRequestDispatcher("cadastroEmpresa.jsp");

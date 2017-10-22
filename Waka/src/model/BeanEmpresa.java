@@ -7,7 +7,7 @@ public class BeanEmpresa  {
 	String ramoAtuacao;
 	String razaoSocial;
 	String cnpj;
-	int idEmpreendedor;
+	String idEmpreendedor;
 	
 	
 	
@@ -78,12 +78,12 @@ public class BeanEmpresa  {
 	}
 
 
-	public int getIdEmpreendedor() {
+	public String getIdEmpreendedor() {
 		return idEmpreendedor;
 	}
 
 
-	public void setIdEmpreendedor(int idEmpreendedor) {
+	public void setIdEmpreendedor(String idEmpreendedor) {
 		this.idEmpreendedor = idEmpreendedor;
 	}
 

@@ -41,21 +41,21 @@ public class CadastroEmpresaServlet extends HttpServlet {
 		DaoEmpresa daoEmpresa = new DaoEmpresa();
 		
 		 //RECEBENDO REQUISIÇÃO
-		empresa.setCnpj(request.getParameter("Cnpj"));
-		empresa.setNome(request.getParameter("nome"));
+		empresa.setCnpj(request.getParameter("cnpj"));
+		empresa.setNome(request.getParameter("nomeEmpresa"));
 		empresa.setRamoAtuacao(request.getParameter("ramoAtuacao"));
-		empresa.setRazaoSocial(request.getParameter("RazaoSocial"));
+		empresa.setRazaoSocial(request.getParameter("razaoSocial"));
 		
 		//EXUCUTAR CADASTRO DE EMPREENDEDOR:
-		daoempreendedor.cadastroEmpreendedor(empreendedor);
-		//SETAR ID DO EMPREENDEDOR CADASTRADO:
-		daoempreendedor.buscarIdEmpreendedor(empreendedor);
-		//EXECUTAR CADASTRO EMPRESSA:
+		//daoempreendedor.cadastroEmpreendedor(empreendedor);
+		
+		//SETAR CHAMVE PRIMARIA DE EMPREENDEDOR
+	
+		//EXUCUTAR CADASTRO DE EMPRESA
 		daoEmpresa.cadastraEmpresa(empresa, empreendedor);
-		//REDIRECIONAR PARA PAGINA DE INSTRUÇÃO:
 		
 		//TESTE:
-		System.out.println("Cadastro Realixado com Sucesso!");
+		System.out.println("Cadastro Realizado com Sucesso!");
 		
 	}
 

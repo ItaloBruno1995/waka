@@ -15,16 +15,20 @@ public class DaoEmpresa {
 	}
 
 	public void cadastraEmpresa(BeanEmpresa empresa, BeanEmpreendedor empreendedor) {
+		int nivelInicial=0;
 		try {
-			PreparedStatement stmt = connection.prepareStatement("insert int empresa(nome, nivel, ramoAtuacao, razaoSocial, cnpj, idEmpreendedor) value(?, ?, ?, ?, ?, ?)");
+			PreparedStatement stmt = connection.prepareStatement("insert into empresa(nome, nivel, ramoAtuacao, razaoSocial, cnpj, idEmpreendedor) value(?, ?, ?, ?, ?, ?)");
 			stmt.setString(1, empresa.getNome());
-			stmt.setInt(2,0 );//SETAR NIVEL COM ZERO (CADASTRO)
+			stmt.setInt(2,nivelInicial);//SETAR NIVEL COM ZERO (CADASTRO)
 			stmt.setString(3, empresa.getRamoAtuacao());
 			stmt.setString(4, empresa.getRazaoSocial());
 			stmt.setString(5, empresa.getCnpj());
-			stmt.setInt(5, empreendedor.getId());
+			stmt.setString(6, empreendedor.getEmail());
+			
+			
 			
 			stmt.execute();
+			System.out.println("PASSOU EMPRESA DAO!");
 			connection.commit();
 				
 			

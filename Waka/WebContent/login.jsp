@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+
+<!DOCTYPE html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta charset="utf-8">
 	<title>login</title>
 	<link rel="stylesheet" href="css/login.css" type="text/css">
 	<link rel="icon" href="img/waka.png">
@@ -23,9 +23,9 @@
 			<p style="color: red;"><%=request.getAttribute("status")%></p>
 			
 			 <table>
-				<tr><td><p>Email: <input type="text" name="email" id="email" /></p></tr></td>
-			    <tr><td><p>Senha: <input type="password" id="senha" name="senha"> <br /> </tr></td></p><tr><td><p>Tipo
-				de Login: <select name="tipoLogin"></p>
+				<tr><td><p>Email: <input type="text" name="email" id="email" required="required" /></p></td></tr>
+			    <tr><td><p>Senha: <input type="password" id="senha" name="senha" required="required">  </p></td></tr>
+			    <tr><td><p>Tipo de Login: <select name="tipoLogin" required="required"></p>
 					<option value="Waka">Waka</option>
 					<option value="Empreendedor">Empreendedor</option>
 					<option value="Investidor">Investidor</option></tr></td>
@@ -34,14 +34,9 @@
 			</form>
 		</div>	
 	</div>
-	<p>Não tem uma conta?<br/><a href="cadastroEmpreendedor.jsp"> Cadastre-se</a></p>
-	
-	
-	<script>
-
+	<p>NÃ£o tem uma conta?<br/><a href="cadastroEmpreendedor.jsp"> Cadastre-se</a></p>
+	<p><a href="recuperacaoSenha.jsp"> Esqueci minha senha</a></p>
 	
 
-
-	</script>
 </body>
 </html>

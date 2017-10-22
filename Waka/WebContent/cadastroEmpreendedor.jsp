@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+
 <!DOCTYPE html>
 <head>
-<meta charset="utf-8" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
 <title>Cadastro Empreendedor</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
 			<tr>
 				<td>Data de nascimento:</td>
 				<td><input type="date" name="dataNascimento" 
-					pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" placeholder=" xx/xx/xxxx"></td>
+					pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" placeholder=" xx/xx/xxxx" required="required"></td>
 			</tr>
 			<tr>
 				<td>Sexo:</td>
@@ -32,19 +33,19 @@
 			<tr>
 				<td>Telefone:</td>
 				<td><input type="tel" id="telefone" name="telefone"
-					pattern="\(\d{2}\)\d{5}-\d{4}" placeholder="(xx) xxxxx-xxxx"></td>
+					pattern="\(\d{2}\)\d{5}-\d{4}" placeholder="(xx) xxxxx-xxxx" required="required"></td>
 			</tr>
 			<tr>
 				<td>Endereço:</td>
-				<td><input type="text" id="endereco" name="endereco"></td>
+				<td><input type="text" id="endereco" name="endereco" required="required"></td>
 			</tr>
 			<tr>
 				<td>Email:</td>
-				<td><input type="email" id="email" name="email" placeholder="nome@exemplo.com" ></td>
+				<td><input type="email" id="email" name="email" placeholder="nome@exemplo.com" required="required"></td>
 			</tr>
 			<tr>
 				<td>Senha:</td>
-				<td><input type="password" id="senha" name="senha"></td>
+				<td><input type="password" id="senha" name="senha" required="required"></td>
 			</tr>
 		</table>
 		<br/>

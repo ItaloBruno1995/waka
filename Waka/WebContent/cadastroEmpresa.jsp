@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+
+<!DOCTYPE html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta charset="utf-8">
 <title>Cadastro Empresa</title>
 </head>
 <body>
@@ -13,19 +13,19 @@
 		<table>
 			<tr>
 				<td>Nome da empresa:</td>
-				<td><input type="text" id="nomeEmpresa" name="nomeEmpresa"></td>
+				<td><input type="text" id="nomeEmpresa" name="nomeEmpresa" required="required"></td>
 			</tr>
 			<tr>
-				<td>Razão Social:</td>
-				<td><input type="text" id="razaoSocial" name="razaoSocial"></td>
+				<td>RazÃ£o Social:</td>
+				<td><input type="text" id="razaoSocial" name="razaoSocial" required="required"></td>
 			</tr>
 			<tr>
 				<td>CNPJ ou CPF:</td>
-				<td><input type="text" id="cnpj" name="cnpj"></td>
+				<td><input type="text" id="cnpj" name="cnpj" required="required"></td>
 			</tr>
 			<tr>
-				<td>Ramo de Atuação:</td>
-				<td><input type="text" id="ramoAtuacao" name="ramoAtuacao"></td>
+				<td>Ramo de AtuaÃ§Ã£o:</td>
+				<td><input type="text" id="ramoAtuacao" name="ramoAtuacao" required="required"></td>
 			</tr>
 		</table>
 			<input type="submit" value="Proximo" >

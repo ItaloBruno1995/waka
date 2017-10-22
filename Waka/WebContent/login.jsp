@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>login</title>
-	<link rel="stylesheet" href="login.css" type="text/css">
+	<link rel="stylesheet" href="css/login.css" type="text/css">
 	<link rel="icon" href="img/waka.png">
 </head>
 <body>

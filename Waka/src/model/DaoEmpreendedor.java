@@ -2,6 +2,7 @@ package model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import connection.SingleConnection;
@@ -38,6 +39,27 @@ public class DaoEmpreendedor {
 				
 				e1.printStackTrace();
 			}
+		}
+		 
+		 
+	 }
+	 
+	 
+	 public void buscarIdEmpreendedor(BeanEmpreendedor empreendedor){
+		
+		 try {
+			 //PROCURAR PELO ID(PELO EMAIL)
+			PreparedStatement stmt = connection.prepareStatement("select * from empreendedor where email=? ");
+			stmt.setString(1, empreendedor.getEmail());
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				//SETAR O CAMPO ID (QUANDO LOCALIZAR)
+				empreendedor.setId(rs.getInt("idEmpreendedor"));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 		 
 		 

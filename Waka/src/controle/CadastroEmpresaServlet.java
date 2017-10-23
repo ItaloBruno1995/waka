@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.BeanEmpreendedor;
 import model.BeanEmpresa;
@@ -34,17 +35,23 @@ public class CadastroEmpresaServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 //INSTANCIA DE OBJETOS:
+		System.out.println("chegou aqui"); 
+		//INSTANCIA DE OBJETOS:
 		BeanEmpreendedor empreendedor = new BeanEmpreendedor();
 		DaoEmpreendedor daoempreendedor = new DaoEmpreendedor();
 		BeanEmpresa empresa= new BeanEmpresa();
 		DaoEmpresa daoEmpresa = new DaoEmpresa();
-		
+		HttpSession session = request.getSession();
 		 //RECEBENDO REQUISIÇÃO
 		empresa.setCnpj(request.getParameter("cnpj"));
 		empresa.setNome(request.getParameter("nomeEmpresa"));
 		empresa.setRamoAtuacao(request.getParameter("ramoAtuacao"));
 		empresa.setRazaoSocial(request.getParameter("razaoSocial"));
+		
+		//RECEBENDO ATRIBUTO DA RIQUEST:
+		String UsuarioLogado= (String) session.getAttribute("sessaoAdministrador");
+		
+		System.out.println("Usuario Logado no SISTEMA RECEBEMOS NA SERVLET2: "+UsuarioLogado);
 		
 		//EXUCUTAR CADASTRO DE EMPREENDEDOR:
 		//daoempreendedor.cadastroEmpreendedor(empreendedor);

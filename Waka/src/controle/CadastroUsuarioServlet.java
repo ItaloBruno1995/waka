@@ -8,6 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.catalina.ant.SessionsTask;
 
 import model.BeanEmpreendedor;
 import model.BeanEmpresa;
@@ -31,7 +34,7 @@ public class CadastroUsuarioServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
+
 		
 	}
 
@@ -50,18 +53,22 @@ public class CadastroUsuarioServlet extends HttpServlet {
 		empreendedor.setEmail(request.getParameter("email"));
 		empreendedor.setSenha(request.getParameter("senha"));
 		
-		empresa.setIdEmpreendedor(request.getParameter("email"));
+		//COLOCAR O USUARIO NA SESS√ÉO:
+		 HttpSession sessaoId = request.getSession();
+		 
+		//COLOCAR EMPREENDEDOR NA SESS√O
+	        sessaoId.setAttribute("sessaoAdministrador",empreendedor.getEmail()); 
+	        System.out.println(empreendedor.getDataNascimento());
+		System.out.println("Usario na sess„o : " +sessaoId.getAttribute("sessaoAdministrador"));
 		
-		System.out.println(empreendedor.getDataNascimento());
+	
 		
 		//EXECUTAR CADASTRO DE EMPREENDEDOR:
 		dao.cadastroEmpreendedor(empreendedor);
 	
-		//COLOCANDO DADOS NA RIQUESTE:
-		
-		
+
 		// REDIRECIONAR PARA PAGINA DE 2 ETAPA DO CADASTRO:
-		RequestDispatcher despatcher = request.getRequestDispatcher("cadastroEmpresa.jsp");
+		RequestDispatcher despatcher = request.getRequestDispatcher("cadastroEmpresa.jsp" );
 		despatcher.forward(request, response);
 	}
 

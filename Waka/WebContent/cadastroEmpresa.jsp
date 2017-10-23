@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Cadastro Empresa</h1>
-	<form action="salvarUsuario" method="post">
+	<form action="CadastroEmpresaServlet" method="post">
 
 		<table>
 			<tr>

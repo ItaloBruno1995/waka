@@ -14,7 +14,7 @@ public class DaoEmpresa {
 		connection = SingleConnection.getConection();
 	}
 
-	public void cadastraEmpresa(BeanEmpresa empresa, BeanEmpreendedor empreendedor) {
+	public void cadastraEmpresa(BeanEmpresa empresa) {
 		int nivelInicial=0;
 		try {
 			PreparedStatement stmt = connection.prepareStatement("insert into empresa(nome, nivel, ramoAtuacao, razaoSocial, cnpj, idEmpreendedor) value(?, ?, ?, ?, ?, ?)");
@@ -23,7 +23,7 @@ public class DaoEmpresa {
 			stmt.setString(3, empresa.getRamoAtuacao());
 			stmt.setString(4, empresa.getRazaoSocial());
 			stmt.setString(5, empresa.getCnpj());
-			stmt.setString(6, empreendedor.getEmail());
+			stmt.setString(6, empresa.getIdEmpreendedor());
 			
 			
 			

@@ -36,20 +36,25 @@ public class CadastroEmpresaServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("chegou aqui"); 
+		
 		//INSTANCIA DE OBJETOS:
 		BeanEmpreendedor empreendedor = new BeanEmpreendedor();
 		DaoEmpreendedor daoempreendedor = new DaoEmpreendedor();
 		BeanEmpresa empresa= new BeanEmpresa();
 		DaoEmpresa daoEmpresa = new DaoEmpresa();
 		HttpSession session = request.getSession();
-		 //RECEBENDO REQUISIÇÃO
+		
+		//RECEBENDO ATRIBUTO DA SESS�O(USUARIO QUE ACABOU DE FAZER CADASTRO):
+		String UsuarioLogado= (String) session.getAttribute("sessaoAdministrador");
+		
+	 //RECEBENDO REQUISIÇÃO
 		empresa.setCnpj(request.getParameter("cnpj"));
 		empresa.setNome(request.getParameter("nomeEmpresa"));
 		empresa.setRamoAtuacao(request.getParameter("ramoAtuacao"));
 		empresa.setRazaoSocial(request.getParameter("razaoSocial"));
+		empresa.setIdEmpreendedor(UsuarioLogado);
 		
-		//RECEBENDO ATRIBUTO DA RIQUEST:
-		String UsuarioLogado= (String) session.getAttribute("sessaoAdministrador");
+		
 		
 		System.out.println("Usuario Logado no SISTEMA RECEBEMOS NA SERVLET2: "+UsuarioLogado);
 		
@@ -59,7 +64,8 @@ public class CadastroEmpresaServlet extends HttpServlet {
 		//SETAR CHAMVE PRIMARIA DE EMPREENDEDOR
 	
 		//EXUCUTAR CADASTRO DE EMPRESA
-		daoEmpresa.cadastraEmpresa(empresa, empreendedor);
+		System.out.println("ATRIBUTO NO EMPRESSA IDEMPRENDEDOR!"+empresa.getIdEmpreendedor());
+		daoEmpresa.cadastraEmpresa(empresa);
 		
 		//TESTE:
 		System.out.println("Cadastro Realizado com Sucesso!");

@@ -1,6 +1,8 @@
 package controle;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -69,6 +71,11 @@ public class CadastroEmpresaServlet extends HttpServlet {
 		
 		//TESTE:
 		System.out.println("Cadastro Realizado com Sucesso!");
+		
+		
+		// REDIRECIONAR PARA PAGINA DE 3 ETAPA DO CADASTRO(NIVEL):
+				RequestDispatcher despatcher = request.getRequestDispatcher("IdentificacaoNivel.jsp" );
+				despatcher.forward(request, response);
 		
 	}
 

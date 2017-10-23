@@ -14,7 +14,7 @@ public class DaoEmpresa {
 		connection = SingleConnection.getConection();
 	}
 
-	public void cadastraEmpresa(BeanEmpresa empresa) {
+	public void  cadastraEmpresa(BeanEmpresa empresa) {
 		int nivelInicial=0;
 		try {
 			PreparedStatement stmt = connection.prepareStatement("insert into empresa(nome, nivel, ramoAtuacao, razaoSocial, cnpj, idEmpreendedor) value(?, ?, ?, ?, ?, ?)");
@@ -31,6 +31,9 @@ public class DaoEmpresa {
 			System.out.println("PASSOU EMPRESA DAO!");
 			connection.commit();
 				
+			
+			//RETORNAR UMA RESPOSTA: 
+
 			
 		} catch (SQLException e) {
 			

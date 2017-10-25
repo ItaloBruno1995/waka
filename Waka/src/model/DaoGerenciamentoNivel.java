@@ -20,7 +20,19 @@ public class DaoGerenciamentoNivel {
 		pontos= nivel.getCliente()+nivel.getFuncionario()+nivel.getReceitaBruta()+nivel.getReceitaLiquida()+
 				nivel.getPortifoleProdutos()+nivel.getlProdutosNovos()+nivel.getvProdutosNovos()+nivel.lucosProdutos+
 				nivel.getEventos()+nivel.getCapitalSocial()+nivel.getValuation();
-		return pontos;
+		if(pontos <=15){
+			pontos = 1;//SETAR  NIVEL
+			return pontos;
+		}if(pontos>16 && pontos<=18){
+			pontos =2;//SETAR NIVEL
+			return pontos;
+		}else{
+			
+			pontos=3;//SETAR NIVEL
+			return pontos;
+		}
+		
+		
 	}
 	
 	public void salvarInicial(BeanGerenciamentoNivel  nivel, BeanUsuario usuario) {

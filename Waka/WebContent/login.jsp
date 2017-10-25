@@ -22,6 +22,7 @@
 			<p style="color: red;"><%=request.getAttribute("status")%></p>
 			
 			 <table>
+			 	
 				<tr><td><p>Email: <input type="text" name="email" id="email" required="required" /></p></td></tr>
 			    <tr><td><p>Senha: <input type="password" id="senha" name="senha" required="required">  </p></td></tr>
 			    <tr><td><p>Tipo de Login: <select name="tipoLogin" required="required"></p>
@@ -38,4 +39,5 @@
 	
 
 </body>
+
 </html>

@@ -81,7 +81,7 @@ public class LoginServlet extends HttpServlet {
 				e.printStackTrace();
 
 				request.setAttribute("status", "Login Invalido");
-				;// ERRO INTERNO DO SERVIDOR
+				// ERRO INTERNO DO SERVIDOR
 				// REDIRECIONAR PARA PAGINA DE LOGIN:
 				RequestDispatcher despatcher = request.getRequestDispatcher("login.jsp");
 				despatcher.forward(request, response);

@@ -13,7 +13,7 @@ import javax.mail.internet.MimeMessage;
 public class enviarEmail {
 	
 	
-	static Session session; //declarar como um atributo de classe e static(global)
+	 static Session session; //declarar como um atributo de classe e static(global)
 	
 	private  String destinario;
     private int codigo;

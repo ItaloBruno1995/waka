@@ -1,4 +1,4 @@
-package Utilitarios;
+/*package Utilitarios;
 import java.util.Properties;
 
 import javax.mail.Address; 
@@ -55,7 +55,7 @@ public  static void enviarGmail(String destinatario, int codigo){
 	System.out.println("Valor que veio do destinatario: ");
 
 	Properties props = new Properties();
-    /** Parâmetros de conexão com servidor Gmail */
+    /** Parâmetros de conexão com servidor Gmail *//*
     props.put("mail.smtp.host", "smtp.gmail.com");
     props.put("mail.smtp.socketFactory.port", "465");
     props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
@@ -69,7 +69,7 @@ public  static void enviarGmail(String destinatario, int codigo){
                            return new PasswordAuthentication("italobrunosantos@gmail.com", "brasil2012");
                      }
                 });
-    /** Ativa Debug para sessão */
+    /** Ativa Debug para sessão 
     session.setDebug(true);
     try {
 
@@ -82,7 +82,7 @@ public  static void enviarGmail(String destinatario, int codigo){
           //FORMATAR UMA PAGINA HTML
           message.setSubject("WAKA : Solicitação de Recuperação de Senha");//Assunto
           message.setText("Codigo de Recuperação de Senha: "+codigo);
-          /**Método para enviar a mensagem criada*/
+          /**Método para enviar a mensagem criada
           Transport.send(message);
           System.out.println("Feito!!!");
      } catch (MessagingException e) {
@@ -92,4 +92,4 @@ public  static void enviarGmail(String destinatario, int codigo){
           
     }
 }
-}
+}*/

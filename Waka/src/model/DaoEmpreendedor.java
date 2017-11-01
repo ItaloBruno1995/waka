@@ -18,6 +18,23 @@ public class DaoEmpreendedor {
 		// CONSTRUTOR:
 		connection = SingleConnection.getConection();
 	}
+ public boolean login(BeanUsuario usuario)  throws Exception{
+		
+		PreparedStatement stmt = connection.prepareStatement("select * from empreendedor where email=? and senha=?");
+		stmt.setString(1, usuario.email);
+		stmt.setString(2, usuario.senha);
+		ResultSet rs = stmt.executeQuery();
+		
+		if(rs.next()){
+			// DEU CERTO:
+			return true;
+		}else{
+			// DEU ERRO:
+			return false;
+		}
+		
+
+	}
 
 	public void cadastroEmpreendedor(BeanEmpreendedor empreendedor) {
 		try {
@@ -107,7 +124,7 @@ public class DaoEmpreendedor {
 			}
 			System.out.println("VALOR FINAL DO CODIGO DO USUARIO  :"+numeroGerado);
 			//ENVIAR EMAIL
-	enviarEmail.enviarGmail(usuarioLogado, numeroGerado);
+	//enviarEmail.enviarGmail(usuarioLogado, numeroGerado);
 		
 		}
 		

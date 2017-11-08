@@ -67,7 +67,7 @@ public class LoginServlet extends HttpServlet {
 				
 
 					// REDIRECIONAR PARA PAGINA DE ACESSO:
-					RequestDispatcher despatcher = request.getRequestDispatcher("index.jsp");
+					RequestDispatcher despatcher = request.getRequestDispatcher("/autenticacao/principalEmpreendedor.jsp");
 					despatcher.forward(request, response);
 
 				} else {
@@ -115,7 +115,7 @@ public class LoginServlet extends HttpServlet {
 				
 
 					// REDIRECIONAR PARA PAGINA DE ACESSO:
-					RequestDispatcher despatcher = request.getRequestDispatcher("index.jsp");
+					RequestDispatcher despatcher = request.getRequestDispatcher("/autenticacao/principalEmpreendedor.jsp");
 					despatcher.forward(request, response);
 
 				} else {
@@ -164,7 +164,7 @@ public class LoginServlet extends HttpServlet {
 				
 
 					// REDIRECIONAR PARA PAGINA DE ACESSO:
-					RequestDispatcher despatcher = request.getRequestDispatcher("index.jsp");
+					RequestDispatcher despatcher = request.getRequestDispatcher("/autenticacao/principalEmpreendedor.jsp");
 					despatcher.forward(request, response);
 
 				} else {

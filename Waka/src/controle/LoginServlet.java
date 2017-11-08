@@ -170,7 +170,7 @@ public class LoginServlet extends HttpServlet {
 				} else {
 					request.setAttribute("status", "Login Invalido");// OPÇÃO
 																		// NÃO
-																		// ENCONTRADA
+									 									// ENCONTRADA
 
 					// REDIRECIONAR PARA PAGINA DE ACESSO:
 					RequestDispatcher despatcher = request.getRequestDispatcher("login.jsp");

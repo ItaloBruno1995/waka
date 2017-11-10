@@ -2,19 +2,17 @@
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 30px 155px 50px 80px 80px 30px 20px;
+  grid-template-rows: 30px 155px auto 30px 20px;
   grid-template-areas:
       'FilhoClose'
       'FilhoLogo'
-      'FilhoEmail'
-      'FilhoSenha'
-      'FilhoBotao'
+	  'formulario'
       'FilhoEsqSenha'
       'FilhoCadastro'
   ;
 }
 body{background: linear-gradient(to bottom, #16222A, #3A6073) no-repeat fixed; }
-.box{}
+
 /*ESTILIZAÇÃO DO BOTAO CLOSE*/
 .FilhoClose{grid-area: FilhoClose; padding: 0;}
 .close{color: #fff; background-color: #AA4545; border: none; width: 45px; float: right; cursor: pointer;}
@@ -23,11 +21,10 @@ body{background: linear-gradient(to bottom, #16222A, #3A6073) no-repeat fixed; }
 .logo{width: 200px; height: 155px; margin:auto;}
 .logo img{width: 120px; margin-left: 40px; margin-top: 80px;}
 /*ESTILIZAÇÃO DO INPUT*/
-.FilhoEmail{grid-area: FilhoEmail;}
-.FilhoSenha{grid-area: FilhoSenha;}
+.formulario{grid-area: formulario}
 .input{width: 250px; margin: auto;}
-.input input{width: 100%; height: 35px; padding: 10px; outline: none; border: 1px solid #D9DADC;}
-.input input:focus{border: 1px solid #1C1C1C;}
+.campo{width: 100%; height: 35px; padding: 10px; outline: none; border: 1px solid #D9DADC;}
+.campo:focus{border: 1px solid #1C1C1C;}
 /*ESTILIZAÇÃO DO BOTÃO DE LOGIN*/
 .FilhoBotao{grid-area: FilhoBotao;}
 .BotaoLogin{width: 255px;  margin: auto;}

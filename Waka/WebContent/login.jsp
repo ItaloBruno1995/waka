@@ -1,43 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<head>
-	<meta charset="utf-8">
-	<title>login</title>
-	<link rel="stylesheet" href="css/login.css" type="text/css">
-	<link rel="icon" href="img/waka.png">
-</head>
-<body>
-	<div class="main">
-		<div class="logo">
-			<img src="img/waka.png">
-		</div>
-		<div>
-			<form action="LoginServlet" method="post">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/gridLogin.css">
+    <link rel="icon" href="img/logoSimples.png">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="container-box">
+      <div class="box FilhoClose">
+        <form class="" action="index.html" method="post">
+          <button class="close" type="submit">X</button>
+        </form>
+      </div>
+      <div class="box FilhoLogo">
+        <div class="logo">
+          <img src="img/logo.png" alt="Waka Coworking - espaço compartilhado">
+        </div>
+      </div>
+	  <div class="formulario">
+	   <form action="LoginServlet" method="post">
 			<!-- RETORNO DO LOGIN(MENSAGEM DE ERRO) -->
 			<%if(request.getAttribute("status")== null) 
 			request.setAttribute("status", "");
 			%>
 			
 			<p style="color: red;"><%=request.getAttribute("status")%></p>
-			
-			 <table>
-			 	
-				<tr><td><p>Email: <input type="text" name="email" id="email" required="required" /></p></td></tr>
-			    <tr><td><p>Senha: <input type="password" id="senha" name="senha" required="required">  </p></td></tr>
-			    <tr><td><p>Tipo de Login: <select name="tipoLogin" required="required"></p>
-					<option value="Waka">Waka</option>
-					<option value="Empreendedor">Empreendedor</option>
-					<option value="Investidor">Investidor</option></tr></td>
-				<tr><td></select> <br /> <input type="submit" value="  Logar  " onclick="salvar()" /></tr></td>
-			 </table>
-			</form>
-		</div>	
-	</div>
-	<p>Não tem uma conta?<br/><a href="cadastroEmpreendedor.jsp"> Cadastre-se</a></p>
-	<p><a href="recuperacaoSenha.jsp"> Esqueci minha senha</a></p>
-	
+          	<table>
+				<tr><td><input type="text" name="" value="" placeholder="Email">
+				</td></tr>
+          <tr><td>
+          <input type="password" name="" value="" placeholder="Senha">
+	</td></tr>
 
-</body>
-
+<tr><td>
+              <button class="botao" type="submit">Login</button>
+</td></tr>
+          </form>
+      <div class="box texto FilhoEsqSenha">
+        <a href="#">Esqueci minha senha</a>
+      </div>
+      <div class="box texto FilhoCadastro">
+        <a href="cadastroEmpreendedor.jsp">Cadastrar</a>
+      </div>
+    </div>
+  </body>
 </html>

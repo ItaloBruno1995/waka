@@ -1,0 +1,82 @@
+
+.container-box{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 155px 80px 121px 100px;
+  grid-template-areas:
+    'Filhologo'
+    'FilhoBemVindo'
+    'Filhobotao1'
+    'Filhobotao2';
+}
+body{background:url('../img/agora.png') no-repeat; }
+.box{
+
+}
+
+/*ESTILIZAÇÃO DO LOGO*/
+.Filhologo{
+  grid-area: Filhologo;
+}
+.logo{
+  width: 200px;
+  height: 155px;
+  margin:auto;
+}
+.logo img{
+  width: 120px;
+  margin-left: 40px;
+  margin-top: 80px;
+}
+
+/*ESTILIZAÇÃO DO TEXTO DE INICIO*/
+.FilhoBemVindo{
+  grid-area: FilhoBemVindo;
+  color: #fff;
+  text-align: center;
+}
+
+.FilhoBemVindo :first-child {
+    font-size: 25px;
+}
+
+
+
+/*ESTILIZAÇÃO DOS BOTÕES*/
+.botao{
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+/*ESTILIZAÇÃO DO PRIMEIRO BOTÃO*/
+.Filhobotao1{
+  grid-area: Filhobotao1;
+}
+
+.botao1{
+  margin: auto;
+  margin-top: 60px;
+  background-color: #fff;
+}
+
+.Filhobotao1 a{
+  color: black;
+}
+
+/*ESTILIZAÇÃO DO SEGUNDO BOTÃO*/
+.Filhobotao2{
+  grid-area: Filhobotao2;
+}
+
+.botao2{
+  margin: auto;
+  background-color: #14D4E2;
+}
+
+.Filhobotao2 a{
+  color: #fff;
+}

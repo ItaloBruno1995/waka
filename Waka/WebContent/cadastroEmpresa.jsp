@@ -38,7 +38,7 @@
       				<td><input type="text" id="ramoAtuacao" name="ramoAtuacao" placeholder="Ramo de Atuação" required="required"></td>
       			</tr>
       		</table>
-      			<button class="botao" type="button" name="button" value="proximo">proximo</button>
+      			<button class="botao" type="submit" name="button" value="proximo">proximo</button>
       	</form>
       </div>
     </div>

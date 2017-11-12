@@ -17,29 +17,42 @@
 </head>
 <body>
 	<div class="container-box">
-      <div class="box Filhologo">
+      	<div class="box Filhologo">
     		<div class="logo">
-    			<img src="img/logo.png" alt="Waka Coworking - espaço compartilhado">
+    			<img src="img/logoPreto.png" alt="Waka Coworking - espaço compartilhado">
     		</div>
-      </div>
+        </div>
     	<div class="box FilhoBemVindo">
-        <p>Bem Vindo</p>
-        <p>A jornada do empreededor</p>
+        	<p>Bem Vindo</p>
+        	<p>A jornada do empreededor</p>
     	</div>
-      <div class="box Filhobotao1">
-         <a href="login.html">
-           <div class="botao botao1">
-             <p>Entrar</p>
-           </div>
-         </a>
-     </div>
-     <div class="box Filhobotao2">
-       <a href="cadastroEmpreendedor.jsp">
-         <div class="botao botao2">
-           <p>Inscrever-se</p>
-         </div>
-       </a>
-     </div>
+    	<div class="box btn-Empreendedor">
+    	 	<div class="btn-div ">
+	    	 	 <form  action="cadastroEmpreendedor.jsp">
+		         	<button class="botao empre" >Cadastro Empreendedor</button>
+		         </form>
+    	 	</div>
+	     </div>
+	     <div class="textoDivisoria">
+	     	<p>OU</p>
+	     </div>
+	    <div class="box btn-Investidor">
+    	 	<div class="btn-div ">
+	    	 	 <form  action="#">
+		         	<button class="botao inve" >Cadastro Investidor</button>
+		         </form>
+		    </div>
+    	</div>
+	     <div class="box textoLogin">
+	     	<p>Já possui uma conta?</p>
+	     </div>
+	     <div class="box btn-login">
+    	 	<div class="btn-div">
+	    	 	 <form  action="">
+		         	<button class="botao inve" >Login</button>
+		         </form>
+		    </div>
+    	</div>
 	</div>
 </body>
 </html>

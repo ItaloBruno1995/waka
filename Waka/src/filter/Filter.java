@@ -16,6 +16,7 @@ import connection.SingleConnection;
 @WebFilter(urlPatterns={"/*"})
 public class Filter implements javax.servlet.Filter {
 	private static Connection conection;
+	
 	@Override
 	public void destroy() {
 		
@@ -24,7 +25,7 @@ public class Filter implements javax.servlet.Filter {
 
 	@Override
 	public void doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain arg2)
-			throws IOException, ServletException {
+		throws IOException, ServletException {
 		try{
 			arg2.doFilter(arg0, arg1);
 			conection.commit();
@@ -39,7 +40,9 @@ public class Filter implements javax.servlet.Filter {
 
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
+		System.out.println("com erro");
 		conection = SingleConnection.getConection();
+		System.out.println("sem erro");
 
     }
 

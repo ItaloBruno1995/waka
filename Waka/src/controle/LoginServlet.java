@@ -52,6 +52,7 @@ public class LoginServlet extends HttpServlet {
 			// VALIDAR ACESSO:
 			usuario.setEmail(request.getParameter("email"));
 			usuario.setSenha(request.getParameter("senha"));
+			System.out.println("servlet parametros");
 
 			try {
 				if (daoWaka.login(usuario)) {

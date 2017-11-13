@@ -1,0 +1,33 @@
+/* Breakpoints*/
+
+/*350*/
+@media screen and (min-width: 350px){
+
+.formFormulario{ width: 270px; }
+.formFormulario input{ width: 270px; }
+
+}
+
+/*370*/
+@media screen and (min-width: 370px){
+
+.formFormulario{ width: 300px; }
+.formFormulario input{ width: 300px; }
+
+}
+
+/*390*/
+@media screen and (min-width: 390px){
+
+.formFormulario{ width: 320px; }
+.formFormulario input{ width: 320px; }
+
+}
+
+/*410*/
+@media screen and (min-width: 410px){
+
+.formFormulario{ width: 340px; }
+.formFormulario input{ width: 340px; }
+
+}

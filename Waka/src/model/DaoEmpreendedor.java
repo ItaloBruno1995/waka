@@ -22,7 +22,7 @@ public class DaoEmpreendedor {
 	public void cadastroEmpreendedor(BeanEmpreendedor empreendedor) {
 		try {
 			PreparedStatement stmt = connection.prepareStatement(
-					"insert into empreendedor(nome, dataNascimento, telefone, endereco, sexo, email, senha) value(?,?,?,?,?,?,?)");
+					"insert into empreendedor(nome, dataNascimento, telefone, endereco, sexo, email, senha, foto) value(?,?,?,?,?,?,?,?)");
 			stmt.setString(1, empreendedor.getNome());
 			stmt.setString(2, empreendedor.getDataNascimento());
 			stmt.setString(3, empreendedor.getTelefone());
@@ -30,6 +30,7 @@ public class DaoEmpreendedor {
 			stmt.setString(5, empreendedor.getSexo());
 			stmt.setString(6, empreendedor.getEmail());
 			stmt.setString(7, empreendedor.getSenha());
+			stmt.setBlob(8, empreendedor.getImagem());
 
 			stmt.execute();
 			System.out.println("Passou em EMPREENDEDOR DAO!");

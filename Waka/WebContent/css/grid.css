@@ -1,0 +1,76 @@
+
+.container-box{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 155px 80px auto 25px auto 100px  auto;
+  grid-template-areas:
+    'Filhologo'
+    'FilhoBemVindo'
+    'btn-Empreendedor'
+    'textoDivisoria'
+    'btn-Investidor'
+    'textoLogin'
+    'btn-login'
+  ;
+}
+body{background: url('../img/320.png') no-repeat; background-size: 100%; }
+
+
+/*ESTILIZAÇÃO DO LOGO*/
+.Filhologo{
+  grid-area: Filhologo;
+}
+.logo{
+  width: 200px;
+  height: 155px;
+  margin:auto;
+}
+.logo img{
+  width: 120px;
+  margin-left: 40px;
+  margin-top: 80px;
+}
+
+/*ESTILIZAÇÃO DO TEXTO DE INICIO*/
+.FilhoBemVindo{
+  grid-area: FilhoBemVindo;
+  color: #fff;
+  text-align: center;
+}
+
+.FilhoBemVindo :first-child {
+    font-size: 25px;
+}
+
+
+
+/*ESTILIZAÇÃO DOS BOTÕES*/
+.botao{width: 240px; height: 50px; border-radius: 5px; border: none; cursor: pointer;  font-size: 16px;}
+.btn-div{width: 240px; margin: auto; }
+
+/*ESTILIZA��O DO PRIMEIRO BOTÃO*/
+.btn-Empreendedor{
+  grid-area: btn-Empreendedor;
+}
+.empre{background-color: #15D4E2; color: #fff;}
+
+
+/*TEXTO QUE SEPARA OS DOIS BOTOES DE CADASTO*/
+.textoDivisoria{grid-area: textoDivisoria; text-align: center; color: #fff; padding-top: 3px;}
+
+
+/*ESTILIZAÇÃO DO SEGUNDO BOTÃO*/
+.btn-Investidor{
+  grid-area: btn-Investidor;
+}
+.inve{background-color: #fff;}
+
+
+/*TEXTO J� POSSUI UMA CONTA*/
+.textoLogin{grid-area: textoLogin; text-align: center; color: #fff; padding-top: 65px;}
+
+/*ESTILIZAÇÃO DO BOT�O DE LOGIN*/
+.btn-login{grid-area: btn-login;}
+.btn-divLogin{width: 240px; margin: auto;}
+.botaoLogin{width: 240px; height: 50px; border-radius: 5px; border: none; cursor: pointer;  font-size: 15px;}

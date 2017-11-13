@@ -5,6 +5,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Cadastro Empreendedor</title>
+	<!-- DECLARAÇÃO JQUERY JAVA SCRIPT -->
+<script type="text/javascript" src=" https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 	<link rel="stylesheet" href="css/gridCadastro.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/mediaQueryFormularios.css">
@@ -29,9 +32,20 @@
 		        		<tr>
 		        			<td>Comece com uma foto</td>
 		        		</tr>
+		        		<!-- Buscar imagem -->
 		        		  	<tr>
-		        				<td><input type="file" id="email" name="email" placeholder="E-mail" required="required"></td>
+		        				<td><input type="file" id="file" name="file" onchange="uploadFile();"/></td>
 		        			</tr>
+		        			
+		        			<!-- Carregar Imagem -->
+		        			<tr>
+		
+							<img alt="Imagem" name="foto" src="" id="target" width="200" height="200" >
+			
+							</tr>
+		        			
+		        			
+		        			
 		        			<tr>
 		        				<td><input type="email" id="email" name="email" placeholder="E-mail" required="required"></td>
 		        			</tr>
@@ -73,4 +87,47 @@
   		</div>
 	
 </body>
+
+<!-- FUNÇÃO JAVASCRIP -->
+<script type="text/javascript">
+function uploadFile() {
+	
+
+
+var target =document.querySelector("img");
+var file= document.querySelector("input[type=file]").files[0];
+
+var reader= new  FileReader();
+
+reader.onload = function () {
+	target.src= reader.result;
+
+	//-------------------------------------
+	//ARQUIVO CORRETO FAZER UPLOAD: COM AJAX:
+	
+	$.ajax({
+			method: "POST",
+			url: "EmpreendedorCadstroServlet",//CHAMAR A SERVLET
+			data: {fileUpload : reader.result} //recebe a imagem
+		}).done(function(response) {
+			alert("Sucesso: "+response);
+		}).fail(function(xhr, status, erroThrown) {
+			alert("ERRO: "+ xhr.responseText);
+		});
+	
+	
+};
+
+if(file){
+reader.readAsDataURL(file);
+		
+}else {
+	
+  target.src="";
+  
+}
+}
+
+</script>
+
 </html>

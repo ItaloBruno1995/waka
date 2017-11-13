@@ -8,6 +8,22 @@ public class BeanEmpreendedor extends BeanUsuario {
 	String telefone;
 	String endereco;
 	Blob imagem;
+	
+	
+
+
+
+
+	public Blob getImagem() {
+		return imagem;
+	}
+
+
+	public void setImagem(Blob imagem) {
+		this.imagem = imagem;
+	}
+
+
 	public String getDataNascimento() {
 		return dataNascimento;
 	}
@@ -57,3 +73,20 @@ public class BeanEmpreendedor extends BeanUsuario {
 	
 	
 }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,12 +7,13 @@
 	<title>Cadastro Empreendedor</title>
 	<link rel="stylesheet" href="css/gridCadastro.css">
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/mediaQueryFormularios.css">
 </head>
 <body>
 	  <div class="container-box">
 		    <div class=" box logo">
 					<div class="logoImg">
-						<img src="img/logo.png" alt="Cadastro Waka Coworking App - Jornada do Empreendedor">
+						<a href="index.jsp"><img src="img/logoPreto.png" alt="Cadastro Waka Coworking App - Jornada do Empreendedor"></a>
 						<a href="login.html">Já possui conta?</a>
 					</div>
 		    </div>
@@ -23,8 +24,14 @@
 				</div>
 			</div>
 		    <div class="box formulario">
-		        	<form class="formularioCadastro" action="CadastroUsuarioServlet" method="post">
+		        	<form class="formFormulario" action="CadastroUsuarioServlet" method="post">
 		        		<table>
+		        		<tr>
+		        			<td>Comece com uma foto</td>
+		        		</tr>
+		        		  	<tr>
+		        				<td><input type="file" id="email" name="email" placeholder="E-mail" required="required"></td>
+		        			</tr>
 		        			<tr>
 		        				<td><input type="email" id="email" name="email" placeholder="E-mail" required="required"></td>
 		        			</tr>

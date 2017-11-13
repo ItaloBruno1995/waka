@@ -47,9 +47,9 @@
 	     	<p>Já possui uma conta?</p>
 	     </div>
 	     <div class="box btn-login">
-    	 	<div class="btn-div">
-	    	 	 <form  action="">
-		         	<button class="botao inve" >Login</button>
+    	 	<div class="btn-divLogin">
+	    	 	 <form  action="login.jsp">
+		         	<button class="botaoLogin inve" >Login</button>
 		         </form>
 		    </div>
     	</div>

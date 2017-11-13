@@ -47,7 +47,7 @@ body{background: url('../img/320.png') no-repeat; background-size: 100%; }
 
 /*ESTILIZAÇÃO DOS BOTÕES*/
 .botao{width: 240px; height: 50px; border-radius: 5px; border: none; cursor: pointer;  font-size: 15px;}
-.btn-div{width: 240px; margin: auto;}
+.btn-div{width: 240px; margin: auto; }
 
 /*ESTILIZA��O DO PRIMEIRO BOTÃO*/
 .btn-Empreendedor{
@@ -72,3 +72,5 @@ body{background: url('../img/320.png') no-repeat; background-size: 100%; }
 
 /*ESTILIZAÇÃO DO BOT�O DE LOGIN*/
 .btn-login{grid-area: btn-login;}
+.btn-divLogin{width: 240px; margin: auto;}
+.botaoLogin{width: 240px; height: 50px; border-radius: 5px; border: none; cursor: pointer;  font-size: 15px;}

@@ -7,22 +7,18 @@
     <link rel="stylesheet" href="css/gridLogin.css">
     <link rel="icon" href="img/logoSimples.png">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" href="css/mediaQueryFormularios.css">
     <title></title>
   </head>
   <body>
     <div class="container-box">
-	      <div class="box FilhoClose">
-	        <form class="" action="index.html" method="post">
-	          <button class="close" type="submit">X</button>
-	        </form>
-	      </div>
 	      <div class="box FilhoLogo">
 	        <div class="logo">
-	          <img src="img/logo.png" alt="Waka Coworking - espaço compartilhado">
+	          <a href="index.jsp"><img src="img/logoPreto.png" alt="Cadastro Waka Coworking App - Jornada do Empreendedor"></a>
 	        </div>
 	      </div>
-		  <div class="formulario">
-		   <form class="input" action="LoginServlet" method="post">
+		  <div class="box formulario">
+		   <form class="formFormulario" action="LoginServlet" method="post">
 				<!-- RETORNO DO LOGIN(MENSAGEM DE ERRO) -->
 				<%if(request.getAttribute("status")== null) 
 				request.setAttribute("status", "");
@@ -30,8 +26,8 @@
 				
 				<p style="color: red;"><%=request.getAttribute("status")%></p>
 	          	<table>
-					<tr><td><input class="campo" type="text" name="" value="" placeholder="Email"></td></tr>
-	          		<tr><td><input class="campo" type="password" name="" value="" placeholder="Senha"></td></tr>
+					<tr><td><input type="text" name="" value="" placeholder="Email"></td></tr>
+	          		<tr><td><input type="password" name="" value="" placeholder="Senha"></td></tr>
 					<tr><td><select name="tipoLogin">
 					  <option value="empreendedor">Empreendedor</option> 
 					  <option value="waka" selected>Waka</option>

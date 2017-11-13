@@ -39,7 +39,7 @@ public class DaoEmpreendedor {
 	public void cadastroEmpreendedor(BeanEmpreendedor empreendedor) {
 		try {
 			PreparedStatement stmt = connection.prepareStatement(
-					"insert into empreendedor(nome, dataNascimento, telefone, endereco, sexo, email, senha) value(?,?,?,?,?,?,?)");
+					"insert into empreendedor(nome, dataNascimento, telefone, endereco, sexo, email, senha,foto) value(?,?,?,?,?,?,?,?)");
 			stmt.setString(1, empreendedor.getNome());
 			stmt.setString(2, empreendedor.getDataNascimento());
 			stmt.setString(3, empreendedor.getTelefone());

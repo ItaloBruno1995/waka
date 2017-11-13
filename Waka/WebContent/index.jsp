@@ -34,7 +34,7 @@
     	 	</div>
 	     </div>
 	     <div class="textoDivisoria">
-	     	<p>OU</p>
+	     	<p>ou</p>
 	     </div>
 	    <div class="box btn-Investidor">
     	 	<div class="btn-div ">

@@ -1,10 +1,13 @@
 package model;
 
+import java.sql.Blob;
+
 public class BeanEmpreendedor extends BeanUsuario {
 
 	String dataNascimento;
 	String telefone;
 	String endereco;
+	Blob imagem;
 	public String getDataNascimento() {
 		return dataNascimento;
 	}

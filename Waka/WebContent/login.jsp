@@ -27,8 +27,7 @@
 				<p style="color: red;"><%=request.getAttribute("status")%></p>
 	          	<table>
 
-					<tr><td><input type="text" name="" value="" placeholder="Email"></td></tr>
-	          		<tr><td><input type="password" name="" value="" placeholder="Senha"></td></tr>
+					
 
 					<tr><td><input class="campo" type="email" name="email" value="" placeholder="Email"></td></tr>
 	          		<tr><td><input class="campo" type="password" name="senha" value="" placeholder="Senha"></td></tr>

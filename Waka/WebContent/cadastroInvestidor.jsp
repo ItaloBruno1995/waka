@@ -54,7 +54,7 @@
 		        			</tr>
 		        		</table>
 		        		<br/>
-		        		<button class="botao" type="submit" name="button" value="proximo">proximo</button>
+		        		<button class="botao" type="submit" name="button" value="proximo">cadastrar</button>
 		        	</form>
 		      </div>
 		</div>

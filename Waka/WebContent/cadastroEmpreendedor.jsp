@@ -4,53 +4,73 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8">
-<title>Cadastro Empreendedor</title>
+	<title>Cadastro Empreendedor</title>
+	<link rel="stylesheet" href="css/gridCadastro.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/mediaQueryFormularios.css">
 </head>
 <body>
-	<h1>Cadastro Empreendedor</h1>
-
-	<form action="CadastroUsuarioServlet" method="post">
-
-		<table>
-			<tr>
-				<td>Nome:</td>
-				<td><input type="text" id="nome" name="nome" required="required"></td>
-			</tr>
-			<tr>
-				<td>Data de nascimento:</td>
-				<td><input type="date" name="dataNascimento" 
-					pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" placeholder=" xx/xx/xxxx" required="required"></td>
-			</tr>
-			<tr>
-				<td>Sexo:</td>
-				<td><select name="sexo">
-						<option value=""></option>
-						<option value="masculino">Masculino</option>
-						<option value="feminino">Feminino</option>
-						<option value="outro">Outro</option>
-				</select></td>
-			</tr>
-			<tr>
-				<td>Telefone:</td>
-				<td><input type="tel" id="telefone" name="telefone"
-					pattern="\(\d{2}\)\d{5}-\d{4}" placeholder="(xx) xxxxx-xxxx" required="required"></td>
-			</tr>
-			<tr>
-				<td>Endereço:</td>
-				<td><input type="text" id="endereco" name="endereco" required="required"></td>
-			</tr>
-			<tr>
-				<td>Email:</td>
-				<td><input type="email" id="email" name="email" placeholder="nome@exemplo.com" required="required"></td>
-			</tr>
-			<tr>
-				<td>Senha:</td>
-				<td><input type="password" id="senha" name="senha" required="required"></td>
-			</tr>
-		</table>
-		<br/>
-		<input type="submit" value="Proximo" >
-		
-	</form>
+	  <div class="container-box">
+		    <div class=" box logo">
+					<div class="logoImg">
+						<a href="index.jsp"><img src="img/logoPreto.png" alt="Cadastro Waka Coworking App - Jornada do Empreendedor"></a>
+						<a href="login.jsp">Já possui conta?</a>
+					</div>
+		    </div>
+			<div class="tipoCadastro">
+				<div class="informacoes">
+					<p>empreendedor</p>
+					<img src="img/foto1.png" alt="">
+				</div>
+			</div>
+		    <div class="box formulario">
+		        	<form class="formFormulario" action="CadastroUsuarioServlet" method="post">
+		        		<table>
+		        		<tr>
+		        			<td>Comece com uma foto</td>
+		        		</tr>
+		        		  	<tr>
+		        				<td><input type="file" id="email" name="email" placeholder="E-mail" required="required"></td>
+		        			</tr>
+		        			<tr>
+		        				<td><input type="email" id="email" name="email" placeholder="E-mail" required="required"></td>
+		        			</tr>
+		              <tr>
+		                <td><input type="password" id="senha" name="senha" placeholder="Senha" required="required"></td>
+		              </tr>
+		              <tr>
+		                <td><input type="text" id="nome" name="nome" required="required" placeholder="Seu nome"></td>
+		              </tr>
+									<tr>
+										<td><input type="tel" id="telefone" name="telefone"
+											pattern="\(\d{2}\)\d{5}-\d{4}" placeholder="Telefone - (xx) xxxxx-xxxx" required="required"></td>
+									</tr>
+									<tr>
+										<td><input type="text" id="endereco" name="endereco" placeholder="Endereço" required="required"></td>
+									</tr>
+									<tr>
+		                <td>Data de Nascimento</td>
+		              </tr>
+		        			<tr>
+		        				<td><input type="date" name="dataNascimento"
+		        					pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" placeholder=" xx/xx/xxxx" required="required"></td>
+		        			</tr>
+		              <tr>
+		                <td>Sexo:</td>
+		              </tr>
+		        			<tr>
+		        				<td><select name="sexo">
+		        						<option value=""></option>
+		        						<option value="masculino">Masculino</option>
+		        						<option value="feminino">Feminino</option>
+		        				</select></td>
+		        			</tr>
+		        		</table>
+		        		<br/>
+		        		<button class="botao" type="submit" name="button" value="proximo">proximo</button>
+		        	</form>
+		      </div>
+  		</div>
+	
 </body>
 </html>

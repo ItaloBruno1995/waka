@@ -38,7 +38,7 @@
 	     </div>
 	    <div class="box btn-Investidor">
     	 	<div class="btn-div ">
-	    	 	 <form  action="#">
+	    	 	 <form  action="cadastroInvestidor.jsp">
 		         	<button class="botao inve" >Cadastro Investidor</button>
 		         </form>
 		    </div>

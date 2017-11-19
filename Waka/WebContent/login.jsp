@@ -29,10 +29,10 @@
 
 					
 
-					<tr><td><input class="campo" type="email" name="email" value="" placeholder="Email"></td></tr>
-	          		<tr><td><input class="campo" type="password" name="senha" value="" placeholder="Senha"></td></tr>
+					<tr><td><input  type="email" name="email" value="" placeholder="Email"></td></tr>
+	          		<tr><td><input  type="password" name="senha" value="" placeholder="Senha"></td></tr>
 
-					<tr><td><select name="tipoLogin">
+					<tr><td><select  name="tipoLogin">
 					  <option value="empreendedor">Empreendedor</option> 
 					  <option value="waka" selected>Waka</option>
 					  <option value="investidor">Investidor</option>

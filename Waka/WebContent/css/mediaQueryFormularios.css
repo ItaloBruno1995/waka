@@ -3,8 +3,9 @@
 /*350*/
 @media screen and (min-width: 350px){
 
-.formFormulario{ width: 270px; }
+.formFormulario{ width: 270px;  }
 .formFormulario input{ width: 270px; }
+.formFormulario select { width: 270px; }
 
 }
 
@@ -13,6 +14,7 @@
 
 .formFormulario{ width: 300px; }
 .formFormulario input{ width: 300px; }
+.formFormulario select { width: 300px; }
 
 }
 
@@ -21,6 +23,7 @@
 
 .formFormulario{ width: 320px; }
 .formFormulario input{ width: 320px; }
+.formFormulario select { width: 320px; }
 
 }
 
@@ -29,5 +32,6 @@
 
 .formFormulario{ width: 340px; }
 .formFormulario input{ width: 340px; }
+.formFormulario select { width: 340px; }
 
 }

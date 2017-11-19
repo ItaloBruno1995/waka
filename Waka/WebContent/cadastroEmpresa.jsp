@@ -20,7 +20,7 @@
 		  <div class="tipoCadastro">
   			<div class="informacoes">
   				<p>negócio</p>
-  				<img src="img/segundo.png" alt="">
+  				
   			</div>
 		  </div>
       <div class="box formulario">
@@ -42,6 +42,19 @@
       			<button class="botao" type="submit" name="button" value="proximo">proximo</button>
       	</form>
       </div>
+	      <div class="progresso">
+			      	<div class="divProgresso">
+				      	<div class="bola primeiro">
+				      		
+				      	</div>
+				      	<div class="bola segundo">
+				      		
+				      	</div>
+				      	<div class="bola terceiro">
+				      		
+				      	</div>
+				    </div>
+		</div>
     </div>
 </body>
 </html>

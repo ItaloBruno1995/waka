@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/gridCadastro.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/mediaQueryFormularios.css">
+
 </head>
 <body>
 	  <div class="container-box">
@@ -23,7 +24,6 @@
 			<div class="tipoCadastro">
 				<div class="informacoes">
 					<p>empreendedor</p>
-					<img src="img/foto1.png" alt="">
 				</div>
 			</div>
 		    <div class="box formulario">
@@ -49,40 +49,42 @@
 		        			<tr>
 		        				<td><input type="email" id="email" name="email" placeholder="E-mail" required="required"></td>
 		        			</tr>
-		              <tr>
-		                <td><input type="password" id="senha" name="senha" placeholder="Senha" required="required"></td>
-		              </tr>
-		              <tr>
-		                <td><input type="text" id="nome" name="nome" required="required" placeholder="Seu nome"></td>
-		              </tr>
+		             	   <tr>
+		                        <td><input type="password" id="senha" name="senha" placeholder="Senha" required="required"></td>
+		             		 </tr>
+				              <tr>
+				                <td><input type="text" id="nome" name="nome" required="required" placeholder="Seu nome"></td>
+				              </tr>
 									<tr>
-										<td><input type="tel" id="telefone" name="telefone"
-											pattern="\(\d{2}\)\d{5}-\d{4}" placeholder="Telefone - (xx) xxxxx-xxxx" required="required"></td>
+										<td><input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\d{5}-\d{4}" placeholder="Telefone - (xx) xxxxx-xxxx" required="required"></td>
 									</tr>
 									<tr>
 										<td><input type="text" id="endereco" name="endereco" placeholder="Endereço" required="required"></td>
 									</tr>
 									<tr>
 		                <td>Data de Nascimento</td>
-		              </tr>
+		                   </tr>
 		        			<tr>
-		        				<td><input type="date" name="dataNascimento"
-		        					pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" placeholder=" xx/xx/xxxx" required="required"></td>
+		        				<td><input type="date" name="dataNascimento" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" placeholder=" xx/xx/xxxx" required="required"></td>
 		        			</tr>
-		              <tr>
-		                <td>Sexo:</td>
-		              </tr>
-		        			<tr>
-		        				<td><select name="sexo">
-		        						<option value=""></option>
-		        						<option value="masculino">Masculino</option>
-		        						<option value="feminino">Feminino</option>
-		        				</select></td>
-		        			</tr>
+		        			
 		        		</table>
 		        		<br/>
 		        		<button class="botao" type="submit" name="button" value="proximo">proximo</button>
 		        	</form>
+		      </div>
+		      <div class="progresso">
+		      	<div class="divProgresso">
+			      	<div class="bola primeiro">
+			      		
+			      	</div>
+			      	<div class="bola segundo">
+			      		
+			      	</div>
+			      	<div class="bola terceiro">
+			      		
+			      	</div>
+			    </div>
 		      </div>
   		</div>
 	

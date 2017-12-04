@@ -16,8 +16,8 @@ body{background: linear-gradient(to bottom, #16222A, #3A6073) no-repeat fixed; }
 /* LOGO*/
 .logo{grid-area: logo; }
 .logoImg {width: 250px; height: 100px;  margin: auto; padding-top: 10px;}
-.logoImg img { width: 100px; float: left; margin-right: 40px; }
-.logoImg a{font-size: 13px; color: #fff; text-decoration: underline;}
+.logoImg img { width: 100px; float: left;}
+.logoImg a{font-size: 13px; color: #fff; text-decoration: underline; margin-right: 20px; }
 
 /*LOGIN*/
 .login{grid-area: login; background-color: red; text-align: right; padding-right: 10px; }

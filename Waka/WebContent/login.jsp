@@ -40,13 +40,14 @@
 					<tr><td><button class="botao" type="submit">Login</button></td></tr>
 				</table>
 	         </form>
+	         </div>
 	      <div class="box texto FilhoEsqSenha">
 	        <a href="#">Esqueci minha senha</a>
 	      </div>
 	      <div class="box texto FilhoCadastro">
 	        <a href="cadastroEmpreendedor.jsp">Cadastrar</a>
 	      </div>
-	    </div>
+	    
     </div>
   </body>
 </html>

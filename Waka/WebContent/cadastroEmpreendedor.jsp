@@ -17,8 +17,8 @@
 	  <div class="container-box">
 		    <div class=" box logo">
 					<div class="logoImg">
-						<a href="index.jsp"><img src="img/logoPreto.png" alt="Cadastro Waka Coworking App - Jornada do Empreendedor"></a>
-						<a href="login.jsp">Já possui conta?</a>
+							<a href="index.jsp"><img src="img/logoPreto.png" alt="Cadastro Waka Coworking App - Jornada do Empreendedor"></a>
+							<a href="login.jsp">Já possui conta?</a>						
 					</div>
 		    </div>
 			<div class="tipoCadastro">

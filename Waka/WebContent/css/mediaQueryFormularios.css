@@ -3,6 +3,9 @@
 /*350*/
 @media screen and (min-width: 350px){
 
+.logoImg {width: 270px;}
+.logoImg a{ margin-right: 30px; }
+.informacoes{width: 270px; }
 .formFormulario{ width: 270px;  }
 .formFormulario input{ width: 270px; }
 .formFormulario select { width: 270px; }
@@ -12,6 +15,8 @@
 /*370*/
 @media screen and (min-width: 370px){
 
+.logoImg {width: 300px;}
+.informacoes{width: 300px; }
 .formFormulario{ width: 300px; }
 .formFormulario input{ width: 300px; }
 .formFormulario select { width: 300px; }
@@ -21,6 +26,8 @@
 /*390*/
 @media screen and (min-width: 390px){
 
+.logoImg {width: 320px;}
+.informacoes{width: 320px; }
 .formFormulario{ width: 320px; }
 .formFormulario input{ width: 320px; }
 .formFormulario select { width: 320px; }
@@ -29,7 +36,8 @@
 
 /*410*/
 @media screen and (min-width: 410px){
-
+.logoImg {width: 340px;}
+.informacoes{width: 340px; }
 .formFormulario{ width: 340px; }
 .formFormulario input{ width: 340px; }
 .formFormulario select { width: 340px; }

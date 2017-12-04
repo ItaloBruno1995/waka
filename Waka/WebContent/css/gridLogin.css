@@ -2,7 +2,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 155px auto autopx auto;
+  grid-template-rows: 155px auto auto auto;
   grid-template-areas:
       'FilhoLogo'
 	  'formulario'
@@ -22,7 +22,7 @@ body{background: linear-gradient(to bottom, #16222A, #3A6073) no-repeat fixed; }
 .formulario{grid-area: formulario}
 .formFormulario{ width: 250px; margin: auto; color: #757575;}
 .formFormulario input{ width: 250px; height: 40px; padding: 10px; margin-bottom: 10px; }
-.formFormulario select { padding: 10px; font-size: 15px;   backgroun-color: yellow; width: 250px;  }
+.formFormulario select { padding: 10px; font-size: 15px; width: 250px;  }
 
 
 .campo:focus{border: 1px solid #1C1C1C;}
